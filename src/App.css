@@ -1,0 +1,15 @@
+@font-face {
+    font-family: Prociono;
+    src: url("/font/Prociono-Regular.otf") format("opentype");
+}
+
+body{
+    font-family: 'Prociono', sans-serif;
+    padding: 5%;
+    text-align: center;
+    color:#e5dfc5;
+    background-color: #252120; 
+}
+.title{
+    font-size: 25px;
+}
