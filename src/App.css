@@ -17,8 +17,7 @@ input::-webkit-input-placeholder{
 
 .title{
     margin-bottom: 15px;
-    font-size: 45px;    
-    text-align: center;
+    font-size: 45px;        
     line-height: 0.8em;
     letter-spacing: -0.05em;
     color: #000;
