@@ -1,7 +1,8 @@
 {
-  "main.css": "static/css/main.42cc9134.css",
-  "main.css.map": "static/css/main.42cc9134.css.map",
-  "main.js": "static/js/main.e2a28c13.js",
-  "main.js.map": "static/js/main.e2a28c13.js.map",
-  "static\\media\\lightsaber.mp3": "static/media/lightsaber.0fffc2f4.mp3"
+  "main.css": "static/css/main.7ec292d8.css",
+  "main.css.map": "static/css/main.7ec292d8.css.map",
+  "main.js": "static/js/main.27564de2.js",
+  "main.js.map": "static/js/main.27564de2.js.map",
+  "static\\media\\lightsaber_off.mp3": "static/media/lightsaber_off.c3d0988a.mp3",
+  "static\\media\\lightsaber_on.mp3": "static/media/lightsaber_on.0fffc2f4.mp3"
 }
