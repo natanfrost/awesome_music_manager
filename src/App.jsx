@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import { FormGroup, FormControl, InputGroup, Glyphicon } from 'react-bootstrap';
 import Profile from './Profile';
 
 class App extends Component{
@@ -34,28 +33,26 @@ class App extends Component{
         });
     }
 
+    search_clicked(){
+        var audio = document.getElementById("audio");
+        audio.play();
+    }
+
     render(){        
         return(
             <div>
                 <div className="title">Awesome Music Manager</div>
-                
-                <FormGroup>
-                    <InputGroup>
-                        <FormControl                             
-                            type="text"
-                            placeholder="Search for a music in a galaxy far far away..." 
-                            onChange={e => {this.setState({query: e.target.value})}}
-                            onKeyPress={e => {
-                                if(e.key === 'Enter'){
-                                    this.search()
-                                }
-                            }}
-                        />           
-                        <InputGroup.Addon onClick={() => this.search()}>
-                            <Glyphicon glyph="search"></Glyphicon>
-                        </InputGroup.Addon>
-                    </InputGroup>                                 
-                </FormGroup>                        
+                <audio id="audio" src="/mp3/lightsaber.mp3" ></audio>
+                <input type="text"
+                    placeholder="Search for a music in a galaxy far far away..." 
+                    onChange={e => {this.setState({query: e.target.value})}}
+                    onKeyPress={e => {
+                        if(e.key === 'Enter'){
+                            this.search()
+                        }
+                    }}
+                    onClick={this.search_clicked}
+                />
 
                 <Profile artist={this.state.artist}/>
 
