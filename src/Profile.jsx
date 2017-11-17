@@ -16,7 +16,6 @@ class Profile extends Component{
         return(
             <div>
                 <div>{artist.name}</div>      
-                <div>Followers: {artist.followers.total}</div>
             </div>  
         )
     }

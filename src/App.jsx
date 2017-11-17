@@ -3,6 +3,7 @@ import './App.css';
 import Profile from './Profile';
 import lightsaberOnSound from './assets/mp3/lightsaber_on.mp3';
 import lightsaberOffSound from './assets/mp3/lightsaber_off.mp3';
+import lightsaberHilt from './assets/imgs/lightsaber_hilt.png';
 
 class App extends Component{
     constructor(props){
@@ -51,18 +52,21 @@ class App extends Component{
                 <div className="title">Awesome Music Manager</div>
                 <audio id="audio_on" src={lightsaberOnSound} ></audio>
                 <audio id="audio_off" src={lightsaberOffSound} ></audio>
-                <input type="text"
-                    placeholder="Search for a music in a galaxy far far away..." 
-                    onChange={e => {this.setState({query: e.target.value})}}
-                    onKeyPress={e => {
-                        if(e.key === 'Enter'){
-                            this.search()
-                        }
-                    }}
-                    onClick={this.search_clicked}
-                    onBlur={this.search_exited}
-                />
-
+                
+                <div>
+                    <div style={{float: 'left'}} ><img src={lightsaberHilt} alt=""/></div>
+                    <div style={{paddingTop: '29px'}}><input type="text"
+                        placeholder="Search for a music in a galaxy far far away..." 
+                        onChange={e => {this.setState({query: e.target.value})}}
+                        onKeyPress={e => {
+                            if(e.key === 'Enter'){
+                                this.search()
+                            }
+                        }}
+                        onClick={this.search_clicked}
+                        onBlur={this.search_exited}
+                    /></div>
+                </div>
                 <Profile artist={this.state.artist}/>
 
                 <div className="gallery">
