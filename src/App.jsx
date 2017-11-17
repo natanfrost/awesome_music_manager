@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Profile from './Profile';
+import lightsaberOnSound from './assets/mp3/lightsaber_on.mp3';
+import lightsaberOffSound from './assets/mp3/lightsaber_off.mp3';
 
 class App extends Component{
     constructor(props){
@@ -34,7 +36,12 @@ class App extends Component{
     }
 
     search_clicked(){
-        var audio = document.getElementById("audio");
+        var audio = document.getElementById("audio_on");
+        audio.play();
+    }
+
+    search_exited(){
+        var audio = document.getElementById("audio_off");
         audio.play();
     }
 
@@ -42,7 +49,8 @@ class App extends Component{
         return(
             <div>
                 <div className="title">Awesome Music Manager</div>
-                <audio id="audio" src="/mp3/lightsaber.mp3" ></audio>
+                <audio id="audio_on" src={lightsaberOnSound} ></audio>
+                <audio id="audio_off" src={lightsaberOffSound} ></audio>
                 <input type="text"
                     placeholder="Search for a music in a galaxy far far away..." 
                     onChange={e => {this.setState({query: e.target.value})}}
@@ -52,6 +60,7 @@ class App extends Component{
                         }
                     }}
                     onClick={this.search_clicked}
+                    onBlur={this.search_exited}
                 />
 
                 <Profile artist={this.state.artist}/>
