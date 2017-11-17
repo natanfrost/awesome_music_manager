@@ -1,15 +1,31 @@
-@font-face {
-    font-family: Prociono;
-    src: url("/font/Prociono-Regular.otf") format("opentype");
-}
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+* { padding: 0; margin: 0; }
 
 body{
-    font-family: 'Prociono', sans-serif;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: 700;
     padding: 5%;
     text-align: center;
-    color:#e5dfc5;
+    color:#ffeda4;
     background-color: #252120; 
 }
+
+input::-webkit-input-placeholder{
+    opacity: 0.5;
+}
+
 .title{
-    font-size: 25px;
+    margin-bottom: 15px;
+    font-size: 45px;    
+    text-align: center;
+    line-height: 0.8em;
+    letter-spacing: -0.05em;
+    color: #000;
+    text-shadow: -2px -2px 0 #ff6, 2px -2px 0 #ff6, -2px 2px 0 #ff6, 2px 2px 0 #ff6;
+    -webkit-transform: perspective(300px) rotateX(25deg);
+    -moz-transform: perspective(300px) rotateX(25deg);
+    -ms-transform: perspective(300px) rotateX(25deg);
+    -o-transform: perspective(300px) rotateX(25deg);
+    transform: perspective(300px) rotateX(25deg);    
 }
