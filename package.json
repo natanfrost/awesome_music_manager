@@ -2,6 +2,7 @@
   "name": "awesome_music_manager",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://natanfrost.github.io/awesome_music_manager/",
   "dependencies": {
     "react": "^16.1.1",
     "react-bootstrap": "^0.31.5",
